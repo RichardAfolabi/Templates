@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>MailChimPHP Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h1 class="center">MailChimPHP - Customizable Subscription Form</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 01 October 2011<br>
+					By: Alexis Serneels<br>
+					Email: <a href="mailto:alexis@opla.be">alexis@opla.be</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">I want to thank you for buying this script. It was prepared with love in order to simplify drastically your implementation. This documentation will give you all the details you may need. Please contact me for any question.</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#goal">Goal</a></li>
+			<li><a href="#require">Requirements</a></li>
+			<li><a href="#files">Files and Structure</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#configuration">Configuration</a></li>
+			<li><a href="#credits">Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="goal"><strong>Goal</strong> - <a href="#toc">top</a></h3>
+		<p>This script will allow you to insert a custom form on any webpage of your website and let people subscribe themselves to your MailChimp Newsletter list.</p>
+		
+		<hr>
+		
+		<h3 id="require"><strong>Requirements</strong> - <a href="#toc">top</a></h3>
+		<p>In order to run this script on your website, you'll need :</p>
+		<ul>
+			<li>A PHP server running PHP 5 or above.</li>
+			<li>A MailChimp account. To register, go to <a href="http://mailchimp.com" title="MailChimp">the MailChimp website</a>
+			<li>Your Mailchimp API Key. To do so, check <a href="http://kb.mailchimp.com/article/where-can-i-find-my-api-key/" title="where-can-i-find-my-api">Where Can I Find My API Key</a></li>
+			<li>A MailChimp List ID. To get it, check <a href="http://kb.mailchimp.com/article/how-can-i-find-my-list-id/" title="where-can-i-find-list-id">Where Can I Get my List ID</a></li>
+			<li>Some love. Which is always needed.</li>
+		</ul>	
+
+		<hr>
+
+		<h3 id="files"><strong>Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I've organized this script as follow :</li>
+		<ul>
+			<li><strong>classes/</strong> <br />
+				Contains the API file for contacting MailChimp servers</li>
+			<li><strong>conf/</strong> <br />
+				Contains the configuration file. See the <a href="#configuration">configuration</a> section below</li>
+			<li><strong>css/</strong> <br/>
+				Contains the styling code for the form</li>
+			<li><strong>documentation/</strong> <br/>
+					The documentation you are reading now</li>
+			<li><strong>index.html</strong> <br/>
+				The main file containing the Complete Form version</li>
+			<li><strong>index_alt.html</strong> <br/>
+				The alternate file containing the Simpler Form version</li>
+			<li><strong>MC.php</strong> <br/>
+				The PHP file treating the information received by the form</li>
+		</ul>
+
+		<hr>
+		
+		<h3 id="installation"><strong>Installation</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To use this script on your server, follow those steps :</p>
+		<ol>
+			<li>Edit the <em>conf/config.mailchimp.php </em>file according to the <a href="#configuration">configuration</a> section below.</li>
+			<li>Upload these folders and files to your server : </br />
+				<ul>
+					<li><strong>classes/</strong></li>
+					<li><strong>conf/</strong></li>
+					<li><strong>MC.php</strong></li>
+				</ul>
+				<em>Warning</em> : These files will have to be on the same level (aka : folder) as the page in which you will put the form code (aka : the code below).
+			</li>
+		</ol>
+		
+		<p>If you want to use the default CSS style provided in this package for your form :</p>
+		<ol>
+			<li>Edit the <em>css/style.css</em> file</li>
+			<li>Upload this folder to your server :
+				<ul>
+					<li><strong>css/</strong></li>
+				</ul>
+		</ol>
+		
+		<p>If you want to use your CSS style for the form :</p>
+		<ol>
+			<li>Edit your CSS file by adding the following selectors :
+				<ul>
+					<li>label</li>
+					<li>input[name="email"]</li>
+					<li>input[name="name"]</li>
+					<li>input[name="surname"]</li>
+					<li>form p</li>
+				</ul>
+			</li>
+		</ol>
+		
+		<p>It is now time to insert the form inside your webpage. <br /> You have three options, choose the one you prefer :</p>
+		
+		<h4><strong>Option 1 - Complex Form</strong></h4>
+		<p>This code displays three form fields  : Email, Name, Surname. All those will be registered in your MailChimp List. <br />
+		<em>Note</em> : The <em>Name</em> and <em>surname</em> fields are still optional.<br />
+		<em>Note</em> : The <em>email</em> field is not optional.</p>
+		
+		<p>Copy and paste the code below in your own webpage where you want it to appear.</p>
+		
+		<pre>
+&lt;!-- MailChimp Form START --&gt;
+&lt;form action="MC.php" method="post" accept-charset="utf-8"&gt;
+  &lt;p&gt;&lt;label for="name"&gt;Your name&lt;/label&gt;&lt;input type="text" name="name" value="" id="name"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for="surname"&gt;Your surname&lt;/label&gt;&lt;input type="text" name="surname" value="" id="surname"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for="email"&gt;Your email&lt;/label&gt;&lt;input type="text" name="email" value="" id="email"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" id="submit" name="submit" value="Subscribe"&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;!-- MailChimp Form END --&gt;
+		</pre>
+		
+		<p><em>Tip</em> : You are welcome to edit any HTML tags as you wish. Just be sure to keep intact the ID and NAME tags of the form elements.<br />
+			If your <em>MC.php</em> file is not located on the same folder than this code, please enter the correct path by changing this part of the code:<br />
+			<pre>
+				form action="THE_CORRECT_PATH/MC.php" method="post"
+			</pre>
+		</p>
+		
+		<h4><strong>Option 2 - Simple Form</strong></h4>
+		
+		<p>This code displays only one form field : Email<br />
+		<em>Note</em> : The <em>email</em> field is not optional.</p>
+		
+		<p>Copy and paste the code below in your own webpage where you want it to appear.</p>
+		
+<pre>
+&lt;!-- MailChimp Form START --&gt;
+&lt;form action="MC.php" method="post" accept-charset="utf-8"&gt;
+  &lt;p&gt;&lt;label for="email"&gt;Your email&lt;/label&gt;&lt;input type="text" name="email" value="" id="email"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" id="submit" name="submit" value="Subscribe"&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;!-- MailChimp Form END --&gt;
+</pre>
+
+		<p><em>Tip</em> : You are welcome to edit any HTML tags as you wish. Just be sure to keep intact the ID and NAME tags of the form elements.<br />
+			If your <em>MC.php</em> file is not located on the same folder than this code, please enter the correct path by changing this part of the code:<br />
+			<pre>
+				form action="THE_CORRECT_PATH/MC.php" method="post"
+			</pre>
+		</p>
+		
+		<h4><strong>Option 3 - Your own Form</strong></h4>
+		<p>You can even use your own form to use with this script. To do so, please check to use the following NAMES and ID'S for your form inputs.
+		<ul>
+			<li>An input with a NAME and ID of <em>email</em></li>
+			<li>An input with a NAME and ID of <em>name</em></li>
+			<li>An input with a NAME and ID of <em>surname</em></li>
+			<li>A <em>submit</em> input with a NAME and ID of <em>submit</em></li>
+		</ul>	
+		</p>
+		
+		<p>And now, <strong>you're ready !</strong></p>
+		
+		<hr>
+		
+		<h3 id="configuration"><strong>Configuration</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To configure the script, please edit the <em>conf/config.mailchimp.php</em> file. <br />
+			Each configuration line has an hint above it in order for you to choose the right option. Here are they in details :</p>
+			
+		<ul>
+			<li><strong>$apikey </strong> : Your API Key - To grab it, check <a href="http://kb.mailchimp.com/article/where-can-i-find-my-api-key/" title="where-can-i-find-my-api">where Can I Find My API Key</a></li>
+			<li><strong>$listId</strong> : The List ID of the list you want the user to be subscribed to. To grab it, check <a href="http://kb.mailchimp.com/article/how-can-i-find-my-list-id/" title="where-can-i-find-list-id">where can I Get my List I</a>D</li>
+			<li><strong>$need_confirmation</strong> : By default, MailChimp sends a confirmation email to every new member. Use FALSE as parameter to deactivate this beavihor.</li>
+			<li><strong>$fname</strong> and <strong>$lname</strong> : By default, MailChimp uses FNAME and LNAME as Merge Tags. See more about the <a href="http://mailchimp.com/features/merge-tags/">MailChimp Merge tags here.</a></li>
+			<li><strong>$email_type</strong> : Do you want to subscribe the user to the <em>HTML</em> or <em>TEXT</em> version of your campaign ? See more about <a href="http://kb.mailchimp.com/article/why-bother-with-plain-text-emails/">Plain-Text version.</a></li>
+			<li><strong>$update_existing</strong> : If the email is already present in the List, do we update the user info with the new one provided ? </li>
+			<li><strong>$send_welcome</strong> : Once the user has been added to the list, does MailChimp sends him a Welcome Email ?</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="credits"><strong>Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This script uses the MailChimp PHP API Wrapper 1.3 which is released under the MIT license.</p>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this script. I'd be glad to help you if you have any questions.	</p> 
+		
+		<p class="append-bottom alt large"><strong>Alexis Serneels</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

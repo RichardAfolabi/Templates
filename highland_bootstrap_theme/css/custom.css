@@ -831,6 +831,32 @@ img.img-about {
 	overflow: hidden;
 	display: block;
 }
+
+/* Addition entries from designer */
+
+.gallery-list > li  .gallery-thumbnail {
+    position: relative;
+    display: block;
+}
+.gallery-list > li  .gallery-thumbnail i {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px; /* your icon height devided by 2 */
+    left: 50%;
+    margin-left: -21px; /* your icon width devided by 2 */
+    font-size: 50px;
+    color: red;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;  
+            transition: all 0.3s;     
+}
+.gallery-list > li:hover  .gallery-thumbnail i{
+    opacity: 1;
+}
+
+
+
 @media (min-width: 992px) and (max-width: 1199px) { /* for md devices */
 	.gallery-list > li .gallery-thumbnail {
 		max-height: 155px;
@@ -887,6 +913,7 @@ img.img-about {
 .gallery-list > li:hover .gallery-bubble {
 	opacity: 1;
 }
+
 
 /* ===== Gallery Item ===== */
 
@@ -1502,3 +1529,5 @@ li.account p{
     width: 360px;
   }
 }
+
+

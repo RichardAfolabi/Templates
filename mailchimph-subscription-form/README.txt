@@ -1,0 +1,1 @@
+To launch the documentation, please open (with your internet browser) the file named Index.html located inside the Documentation folder. Thank you.

@@ -1,0 +1,51 @@
+label {
+	float: left;
+	width: 100px;
+	padding: 0 10px;
+	text-align: right;
+}
+
+input[name="email"], input[name="name"], input[name="surname"] {
+	width: 150px;
+	border-top: 1px solid #555;
+	border-left: 1px solid #555;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	color: #333;
+}
+
+input:focus, textarea:focus {
+	background: #efefef;
+	color: #000;
+}
+
+body {
+	padding: 0;
+	color: #333;
+	background: #fff;
+	font: 12px arial,verdana,sans-serif;
+	text-align: center;
+}
+
+form {
+	margin: 0 auto;
+	padding: 0px;
+	width: 350px;
+}
+
+p {
+	margin: 0px;
+	padding: 5px 0px;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	font-size : 11px;
+}
+
+hr {
+	margin-top: 10px ;
+	color: #333;
+	width: 300px;
+}
