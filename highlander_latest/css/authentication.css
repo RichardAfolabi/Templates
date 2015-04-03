@@ -1,0 +1,74 @@
+
+
+
+
+.sns-signin {
+  margin: 50px;    
+}
+
+.sns-signin a {
+  margin-bottom: 25px;
+  display: block;
+  color: #ffffff;
+}
+
+.sns-signin a:hover{
+    text-decoration: none;
+}
+
+.sns-signin a span {
+  margin-left: 30px;
+}
+.sns-signin .facebook {
+  background-color: #3e4764;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+.sns-signin .facebook:hover {
+  background-color: #235B97;
+}
+.sns-signin .facebook .fa-facebook {
+  color: #505050;
+  background-color: #eaeaea;
+  padding: 15px 19px 15px 18px;
+}
+
+
+.sns-signin .google-plus {
+  background-color: #e66060;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+.sns-signin .google-plus:hover {
+  background-color: #EC574B;
+}
+.sns-signin .google-plus .fa-google-plus {
+  color: #505050;
+  background-color: #eaeaea;
+  padding: 15px 19px 15px 18px;
+}
+
+
+
+.sns-signin .twitter {
+  background-color: #00ACED;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+.sns-signin .twitter:hover {
+  background-color: #0084b4;
+}
+.sns-signin .twitter .fa-twitter {
+  color: #505050;
+  background-color: #eaeaea;
+  padding: 15px 19px 15px 18px;
+}
