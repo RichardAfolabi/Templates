@@ -74,30 +74,3 @@
 }
 
 
-
-
-.authenty.signin-alt .normal-signin .un-wrap {
-  position: relative;
-}
-.authenty.signin-alt .normal-signin .un-wrap .fa-user {
-  position: absolute;
-  top: 2px;
-  left: 1px;
-  color: #515561;
-  font-size: 14pt;
-  padding: 10px 14px;
-  background-color: #1C1F25;
-}
-.authenty.signin-alt .normal-signin .pw-wrap {
-  position: relative;
-}
-.authenty.signin-alt .normal-signin .pw-wrap .fa-lock {
-  position: absolute;
-  top: 2px;
-  left: 1px;
-  color: #515561;
-  font-size: 14pt;
-  padding: 10px 16px;
-  background-color: #1C1F25;
-}
-

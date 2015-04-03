@@ -23,6 +23,8 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" type="text/css" href="css/elements.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
+      
+      <link rel="stylesheet" type="text/css" href="css/authentication.css" /> 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -162,58 +164,112 @@
     <!-- Main body
     ================== -->
     <div class="wrapper">
+        
+        
+        
+        
+        
       <!-- Page Tip -->
       <div class="page-tip animated slideInDown">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <p>Fill out the form below to sign up.</p>
+              <p class="lead">Fill out the form below to sign up.</p>
             </div>
           </div>
         </div>
       </div>
       <!-- Main Form -->
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 signup">
-            <h3 class="hl top-zero">Registration</h3>
-            <hr>
-            <form role="form">
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputName1">Name</label>
-                <input type="text" class="form-control" id="exampleInputName1" placeholder="Your name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your full name here." data-original-title="Name">
-              </div>
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputUsername1">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your nickname here." data-original-title="Username">
-              </div>
-              <div class="form-group">
-                <label class="sr-only" for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid email here." data-original-title="Email">
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <label class="sr-only" for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control margin-bottom-xs" id="exampleInputPassword1" placeholder="Password" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Three symbols minimum." data-original-title="Password">
-                  </div>
-                  <div class="col-sm-6">
-                    <label class="sr-only" for="exampleInputPassword2">Repeat password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password" data-toggle="popover" data-trigger="focus" data-content="Make sure you still remember it." data-original-title="Repeat Password">
-                  </div>
+<!--        <div class="row">-->
+<!--          <div class="col-md-12">-->
+            <div class="section-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1><span>Registration</span></h1>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-                </label>
-              </div>
-              <button type="submit" class="btn btn-green">Create an account</button>
-            </form>
+            </div>
+<!--          </div>-->
+<!--        </div>-->
+          
+        <div class="row">
+            
+          <div class="col-md-6 col-sm-6">
+            <div class="block-header">
+                <h2><span class="title">Best Way to Signup</span></h2>
+            </div>
+            
+   
+              
+            <div class="login-social">
+                <div class="sns-signin">
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i><span>Login with Facebook</span></a>
+                    <a href="#" class="google-plus"><i class="fa fa-google-plus"></i><span>Login with Google+</span></a>
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i><span>Login with Twitter</span></a>
+				</div>
+            </div>
+              
+            <div class="clearfix"></div>
           </div>
-        </div>
+          
+
+            
+            <div class="col-md-6 col-sm-6">
+            <div class="block-header">
+                <h2><span class="title">Email Signup</span></h2>
+            </div>
+                
+                <div class="form-box">
+                   <form role="form">
+                   <div class="form-group">
+                    <label class="sr-only" for="exampleInputName1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Your name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your full name here." data-original-title="Name">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputUsername1">Username</label>
+                    <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your nickname here." data-original-title="Username">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid email here." data-original-title="Email">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label class="sr-only" for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control margin-bottom-xs" id="exampleInputPassword1" placeholder="Password" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Three symbols minimum." data-original-title="Password">
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="sr-only" for="exampleInputPassword2">Repeat password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password" data-toggle="popover" data-trigger="focus" data-content="Make sure you still remember it." data-original-title="Repeat Password">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-green  btn-lg">Claim your account</button>
+                </form>
+                    
+                </div>
+            </div>
+        </div>  
       </div>
+        
+        
+        
+        
+        
+        
+        
     </div>
+
+ 
       
     <!-- Foooter
     ================== -->
