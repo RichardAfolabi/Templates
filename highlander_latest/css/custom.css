@@ -977,6 +977,45 @@ iframe[src="about:blank"] {
   padding-left: 5px !important;
 }
 
+
+
+/*Gallery Customization*/
+
+
+.gallery-thumbnail {
+    position: relative;
+    display: block;
+}
+.icon_play {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    color: white;
+    transform: scale(0.8);
+    border: 1px double white;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0px 0px 0px 2px white;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;     
+            transition: all 0.3s;
+}
+
+
+.gallery-thumbnail:hover .icon_play {
+    opacity: 1;
+}
+
+
+
+
+
 /* Showcase controls */
 
 a.carousel-arrow {

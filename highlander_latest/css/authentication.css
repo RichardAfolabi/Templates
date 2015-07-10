@@ -1,5 +1,21 @@
 
 
+/*
+.entry input[type="email"] {
+    margin-bottom: 20px;
+    height: 42px;
+}
+*/
+
+
+.form-box input[type="email"],input[type="password"],input[type="text"] {
+  padding-left: 15px;
+/*  margin-bottom: 15px;*/
+  color: dimgray;
+  border-radius: 5px;  
+  height: 38px;
+  
+}
 
 
 .sns-signin {
